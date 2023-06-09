@@ -9,12 +9,26 @@ PODS:
     - React-Core (= 0.71.10-0)
     - React-jsi (= 0.71.10-0)
     - ReactCommon/turbomodule/core (= 0.71.10-0)
+  - Firebase/CoreOnly (10.10.0):
+    - FirebaseCore (= 10.10.0)
+  - FirebaseCore (10.10.0):
+    - FirebaseCoreInternal (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/Logger (~> 7.8)
+  - FirebaseCoreInternal (10.10.0):
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
   - fmt (7.1.3)
   - glog (0.3.5)
+  - GoogleUtilities/Environment (7.11.1):
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/Logger (7.11.1):
+    - GoogleUtilities/Environment
+  - "GoogleUtilities/NSData+zlib (7.11.1)"
   - hermes-engine (0.71.10-0):
     - hermes-engine/Pre-built (= 0.71.10-0)
   - hermes-engine/Pre-built (0.71.10-0)
   - libevent (2.1.12.1)
+  - PromisesObjC (2.2.0)
   - RCT-Folly (2021.07.22.00):
     - boost
     - DoubleConversion
@@ -331,6 +345,9 @@ PODS:
     - React-jsi (= 0.71.10-0)
     - React-logger (= 0.71.10-0)
     - React-perflogger (= 0.71.10-0)
+  - RNFBApp (18.0.0):
+    - Firebase/CoreOnly (= 10.10.0)
+    - React-Core
   - Yoga (1.14.0)
 
 DEPENDENCIES:
@@ -369,11 +386,18 @@ DEPENDENCIES:
   - React-RCTText (from `../node_modules/react-native/Libraries/Text`)
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - "RNFBApp (from `../node_modules/@react-native-firebase/app`)"
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
   https://github.com/react-native-tvos/react-native-tvos-podspecs.git:
     - libevent
+  trunk:
+    - Firebase
+    - FirebaseCore
+    - FirebaseCoreInternal
+    - GoogleUtilities
+    - PromisesObjC
 
 EXTERNAL SOURCES:
   boost:
@@ -442,6 +466,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/runtimeexecutor"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RNFBApp:
+    :path: "../node_modules/@react-native-firebase/app"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -450,10 +476,15 @@ SPEC CHECKSUMS:
   DoubleConversion: 234abba95e31cc2aada0cf3b97cdb11bc5b90575
   FBLazyVector: 266fdccb043f83c1f66898f2ec82360d3d1571cf
   FBReactNativeSpec: db780a6619d0a4757c9be2be09c6d1532295266e
+  Firebase: facd334e557a979bd03a0b58d90fd56b52b8aba0
+  FirebaseCore: d027ff503d37edb78db98429b11f580a24a7df2a
+  FirebaseCoreInternal: 971029061d326000d65bfdc21f5502c75c8b0893
   fmt: 135c0c55547979f715b56dfa54037ececa96d07a
   glog: a2ded9bf28f0cb2fce90ad21eb419299a500ff6c
+  GoogleUtilities: 9aa0ad5a7bc171f8bae016300bfcfa3fb8425749
   hermes-engine: 6f70936b41540df279716a12630691bb10d74512
   libevent: a6d75fcd7be07cbc5070300ea8dbc8d55dfab88e
+  PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
   RCT-Folly: 136e9161a833a162fe3e8b647098759aae227036
   RCTRequired: 10b190f32c9affca9d5ab4a2c31364e5e2888e47
   RCTTypeSafety: f4eae9dc1d59788b4b2a72fa1cf952e30ba58fad
@@ -480,8 +511,9 @@ SPEC CHECKSUMS:
   React-RCTText: 2c6c885b087cda557df82663907ec43d9332a0c3
   React-runtimeexecutor: b356132ee35b3839a774e78ca2b0bbaaa60ab4f6
   ReactCommon: 5058b77813ccae942072a77a541c72c1e171cb14
+  RNFBApp: 10aa0ab560e30186c39a9756846945cac6499ea7
   Yoga: 8a66578e1e74889976eed9edb780b0bd27623b60
 
-PODFILE CHECKSUM: 907f54b3c0f92af1b0463ad60ebf600ef983b971
+PODFILE CHECKSUM: 110d82a93a687093e8da1c23f9b4185fe09d1f48
 
 COCOAPODS: 1.12.1
